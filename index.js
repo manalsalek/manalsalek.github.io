@@ -16,7 +16,7 @@ controls.update();
 
 function init (geometry) { 
   const material = new THREE.MeshMatcapMaterial({
-    matcap: new THREE.TextureLoader().load('./assets/textures/matcaps/black-n-shiney.jpg')
+    matcap: new THREE.TextureLoader().load('./loading-a-model-main/assets/textures/matcaps/black-n-shiney.jpg')
   });
   const mesh = new THREE.Mesh(geometry, material);
   scene.add(mesh);
@@ -38,7 +38,7 @@ function init (geometry) {
 }
 
 const loader = new OBJLoader();
-loader.load("./assets/models/A_10.obj", (obj) => init(obj.children[0].geometry) );
+loader.load("./loading-a-model-main/assets/models/A_10.obj", (obj) => init(obj.children[0].geometry) );
 
 function handleWindowResize () {
   camera.aspect = window.innerWidth / window.innerHeight;
