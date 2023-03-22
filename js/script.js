@@ -70,7 +70,7 @@ const sizes = {
 /**
  * Camera
  */
-const camera = new THREE.PerspectiveCamera(35, sizes.width / sizes.height)
+const camera = new THREE.PerspectiveCamera(45, sizes.width / sizes.height)
 camera.position.z = 6
 
 scene.add(camera)
