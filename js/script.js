@@ -70,8 +70,8 @@ const sizes = {
 /**
  * Camera
  */
-const camera = new THREE.PerspectiveCamera(45, sizes.width / sizes.height)
-camera.position.z = 6
+const camera = new THREE.PerspectiveCamera(35, sizes.width / sizes.height)
+camera.position.z = 9
 
 scene.add(camera)
 
@@ -88,7 +88,7 @@ scene.add(pointLight)
  * Mouse move
  */
 
-var plane = new THREE.Plane(new THREE.Vector3(0, 0, 1), -5);
+var plane = new THREE.Plane(new THREE.Vector3(0, 0, 1), -2);
 var raycaster = new THREE.Raycaster();
 var mouse = new THREE.Vector2();
 var pointOfIntersection = new THREE.Vector3();
