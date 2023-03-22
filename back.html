@@ -47,7 +47,7 @@
 	  
 		  renderer = new THREE.WebGLRenderer();
 		  renderer.setSize(window.innerWidth,window.innerHeight);
-		  scene.fog = new THREE.FogExp2(0x03544e, 0.001);
+		  scene.fog = new THREE.FogExp2(0xffffff, 0.001);
 		  renderer.setClearColor(scene.fog.color);
 		  document.body.appendChild(renderer.domElement);
 
