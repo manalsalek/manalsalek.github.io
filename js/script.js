@@ -78,7 +78,9 @@ scene.add(camera)
 /**
  * Lights
  */
-const pointLight = new THREE.PointLight(0xffffff, 1)
+
+const pointLight = new THREE.PointLight(0xfdda0d, 1.9)
+
 pointLight.position.z = 1.5
 scene.add(pointLight)
 
