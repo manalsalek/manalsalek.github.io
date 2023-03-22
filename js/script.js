@@ -88,7 +88,7 @@ scene.add(pointLight)
  * Mouse move
  */
 
-var plane = new THREE.Plane(new THREE.Vector3(1, 0, 0), -1);
+var plane = new THREE.Plane(new THREE.Vector3(0, 0, 0), -2);
 var raycaster = new THREE.Raycaster();
 var mouse = new THREE.Vector2();
 var pointOfIntersection = new THREE.Vector3();
