@@ -16,7 +16,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
 
 	<script>
-		let scene, camera, renderer;
+		let scene, camera, renderer, cloudParticles = [];;
 	  
 		function init() {
 		  scene = new THREE.Scene();
@@ -28,6 +28,10 @@
 	  
 		  let ambient = new THREE.AmbientLight(0x555555);
 		  scene.add(ambient);
+
+		  let directionalLight = new THREE.DirectionalLight(0xff8c19);
+			directionalLight.position.set(0,0,1);
+			scene.add(directionalLight);
 	  
 		  renderer = new THREE.WebGLRenderer();
 		  renderer.setSize(window.innerWidth,window.innerHeight);
@@ -55,13 +59,17 @@
 				cloud.rotation.y = -0.12;
 				cloud.rotation.z = Math.random()*360;
 				cloud.material.opacity = 0.6;
+				cloudParticles.push(cloud);
 				scene.add(cloud);
 			}
 			});
 	  
 		  render();
 		}
-		function render() {
+		function render() {			
+		cloudParticles.forEach(p => {
+			p.rotation.z -=0.001;
+		});
 		  renderer.render(scene,camera);
 		  requestAnimationFrame(render);
 		}
